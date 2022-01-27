@@ -1,0 +1,13 @@
+Fall 2016
+- add the mysql connector using maven.
+  I'll talk about this in class
+
+
+Old
+You need the mysql connector library installed in your referenced libraries
+- Download from http://dev.mysql.com/downloads/connector/j/
+- add to libraries
+	- Project Properties/Java Build Path/Add external jars
+
+See this web site (my google site page)
+https://sites.google.com/site/saultcollegeit/courses/csd211-fall-2010/database-tutorial
