@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<entity-mappings ptype="MONOLITH" ppkg="lab2.part2" epkg="domain" v="5.4.3" rws="_16448592550982" Pws="_16448592550982" cws="_16448592550982" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_16448592550971" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<entity-mappings ptype="MONOLITH" ppkg="lab2.part2" epkg="entities" v="5.4.3" rws="_16448592550982" Pws="_16448592550982" cws="_16448592550982" persistenceUnitName="LAB2_PART2_DEFAULT_PU" sm="false" xs="false" id="_16448592550971" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <entity compositePrimaryKeyClass="PersonPK" abs="false" class="Person" v="true" jbn="false" xre="false" m="false" rootElement="_16448592550971" id="_16448592863923">
         <ath>alars</ath>
         <attributes>
@@ -19,7 +19,7 @@
                 <xwm/>
                 <xm/>
                 <column unique="true" nullable="true" insertable="true" updatable="true"/>
-                <generated-value strategy="DEFAULT"/>
+                <generated-value strategy="IDENTITY"/>
             </id>
         </attributes>
         <nq e="false" name="Person.findAll">

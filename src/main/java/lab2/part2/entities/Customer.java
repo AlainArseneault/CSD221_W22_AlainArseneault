@@ -1,5 +1,6 @@
-package lab2.part2.domain;
+package lab2.part2.entities;
 
+import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
@@ -7,7 +8,7 @@ import javax.persistence.Entity;
  * @author alars
  */
 @Entity
-public class Customer extends Person {
+public class Customer extends Person implements Serializable {
 
     @Basic
     private String credit_card_number;
