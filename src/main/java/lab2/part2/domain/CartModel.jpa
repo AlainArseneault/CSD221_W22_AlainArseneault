@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings ptype="MONOLITH" ppkg="lab2.part2" epkg="domain" v="5.4.3" rws="_16448592550982" Pws="_16448592550982" cws="_16448592550982" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_16448592550971" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <entity compositePrimaryKeyClass="PersonPK" abs="false" class="Person" v="true" jbn="false" xre="false" m="false" rootElement="_16448592550971" id="_16448592863923">
+        <ath>alars</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="firstName" id="_16448593141526">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="lastName" id="_16448593151277">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="int" v="true" xvt="" name="SIN" id="_164486006419812">
+                <xwm/>
+                <xm/>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_16448592864784">
+                <xwm/>
+                <xm/>
+                <column unique="true" nullable="true" insertable="true" updatable="true"/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Person.findAll">
+            <query>Select e from Person e</query>
+        </nq>
+        <nq e="false" name="Person.findByFirstName">
+            <query>Select c from Person c where c.firstName=:firstName</query>
+        </nq>
+        <nq e="false" name="Person.findByLastName">
+            <query>Select c from Person c where c.lastName=:lastName</query>
+        </nq>
+        <nq e="false" name="Person.findBySIN">
+            <query>Select p from Person p where p.SIN=:SIN</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="EmployeePK" abs="false" class="Employee" superclassId="_16448592863923" v="true" jbn="false" xre="false" m="false" rootElement="_16448592550971" id="_16448593363608">
+        <ath>alars</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="title" id="_164486004801211">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="salary" id="_164486008161213">
+                <xwm/>
+                <xm/>
+            </basic>
+        </attributes>
+        <nq e="false" name="Employee.findAll">
+            <query>Select e from Employee e</query>
+        </nq>
+        <nq e="false" name="Employee.findByTitle">
+            <query>Select p from Employee p where p.title=:title</query>
+        </nq>
+        <nq e="false" name="Employee.findBySalary">
+            <query>Select p from Employee p where p.salary=:salary</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="CustomerPK" abs="false" class="Customer" superclassId="_16448592863923" v="true" jbn="false" xre="false" m="false" rootElement="_16448592550971" id="_164486028111415">
+        <ath>alars</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="credit_card_number" id="_164486029795618">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="cust_id" id="_164486030609519">
+                <xwm/>
+                <xm/>
+            </basic>
+        </attributes>
+        <nq e="false" name="Customer.findAll">
+            <query>Select e from Customer e</query>
+        </nq>
+        <nq e="false" name="Customer.findByCredit_card_number">
+            <query>Select c from Customer c where c.credit_card_number=:credit_card_number</query>
+        </nq>
+        <nq e="false" name="Customer.findByCust_id">
+            <query>Select c from Customer c where c.cust_id=:cust_id</query>
+        </nq>
+    </entity>
+    <wsl>
+        <ws n="Main" id="_16448592550982">
+            <i ref="_16448592863923" x="314" y="74"/>
+            <i ref="_164486028111415" x="465" y="333"/>
+            <i ref="_16448593363608" x="81" y="333"/>
+        </ws>
+    </wsl>
+</entity-mappings>
