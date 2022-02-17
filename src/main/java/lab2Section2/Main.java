@@ -1,4 +1,4 @@
-package lab2.p2.q6;
+package lab2Section2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -75,7 +75,8 @@ public class Main {
                 int supplierID = rs.getInt("ID");
                 String cdName = rs.getString("CD_NAME");
                 String bandName = rs.getString("BAND_NAME");
-                System.out.println(cdName + "(" + supplierID + "): " + cdName + bandName);
+                int year = rs.getInt("YEAR");
+                System.out.println(cdName + "(" + supplierID + "): " + cdName + bandName  );
             }
         } finally {
             stmt.close();
@@ -100,13 +101,13 @@ public class Main {
             stmt = con.createStatement();
 
             stmt.executeUpdate("insert into " + TABLE_NAME + " "
-                    + "values(1, '5150', 'Van Halen')");
+                    + "values(1, '5150', 'Van Halen' ,1191)");
             stmt.executeUpdate("insert into " + TABLE_NAME + " "
-                    + "values(2, '1984', 'Van Halen')");
+                    + "values(2, '1984', 'Van Halen',1919)");
             stmt.executeUpdate("insert into " + TABLE_NAME + " "
-                    + "values(3, 'Back in Black', 'AC/DC')");
+                    + "values(3, 'Back in Black', 'AC/DC',1212)");
             stmt.executeUpdate("insert into " + TABLE_NAME + " "
-                    + "values(4, 'Full Bluntal Nugity', 'Ted Nugent')");
+                    + "values(4, 'Full Bluntal Nugity', 'Ted Nugent',1222)");
 
         } finally {
             stmt.close();
@@ -118,9 +119,9 @@ public class Main {
                 = "create table " + TABLE_NAME + " " + "(ID integer NOT NULL AUTO_INCREMENT, "
                 + "CD_NAME varchar(40) NOT NULL, "
                 + "BAND_NAME varchar(40) NOT NULL, "
-                //THIS IS THE CHANGE MADE : ADDS THE YEAR COLLUMN
-                + "YEAR INT NOT NULL,"
-                + "PRIMARY KEY (ID))";
+                +"YEAR INT NOT NULL,"
+                + "PRIMARY KEY (ID))" 
+                ;
 
         Statement stmt = null;
         try {
