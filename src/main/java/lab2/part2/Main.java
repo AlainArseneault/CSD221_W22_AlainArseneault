@@ -16,7 +16,7 @@ import lab2.part2.entities.*;
  *
  * @author alars
  */
-public class Main2 {
+public class Main {
      public static void main(String[] args) {
         EntityManagerFactory emf=null;
         EntityManager em=null;
@@ -63,7 +63,6 @@ public class Main2 {
                 System.out.println(Customer.getFirstName()+ " "+Customer.getLastName());
             }
             System.out.println("----------------------------------------------");
-            System.out.println("Hello");
             List<Employee> ListOfEmployees = em.createQuery("SELECT c FROM Employee c").getResultList();
             System.out.println("List of Employees");
             for(Employee Employee:ListOfEmployees){
