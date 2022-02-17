@@ -67,7 +67,7 @@ public class Main {
     public static void viewTable() throws SQLException {
         Statement stmt = null;
         String query
-                = "select ID, CD_NAME, BAND_NAME from " + TABLE_NAME;
+                = "select ID, CD_NAME, BAND_NAME, YEAR from " + TABLE_NAME;
         try {
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
@@ -76,7 +76,7 @@ public class Main {
                 String cdName = rs.getString("CD_NAME");
                 String bandName = rs.getString("BAND_NAME");
                 int year = rs.getInt("YEAR");
-                System.out.println(cdName + "(" + supplierID + "): " + cdName + bandName  );
+                System.out.println(cdName + "(" + supplierID + "): " + cdName + bandName  + year);
             }
         } finally {
             stmt.close();
