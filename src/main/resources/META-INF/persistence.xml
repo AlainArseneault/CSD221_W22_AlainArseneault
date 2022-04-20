@@ -5,6 +5,14 @@
     <class>lab2.part2.domain.Person</class>
     <class>lab2.part2.domain.Employee</class>
     <class>lab2.part2.domain.Customer</class>
+    <class>lab3.entities.Publication</class>
+    <class>lab3.entities.Magazine</class>
+    <class>lab3.entities.DiscMag</class>
+    <class>lab3.entities.Book</class>
+    <class>lab4.DiscMag</class>
+    <class>lab4.Publication</class>
+    <class>lab4.Magazine</class>
+    <class>lab4.Book</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/lab2?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
       <property name="javax.persistence.jdbc.password" value="itstudies12345"/>

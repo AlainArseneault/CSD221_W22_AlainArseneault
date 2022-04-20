@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings ptype="MONOLITH" ppkg="lab4" epkg="entities" v="5.4.3" rws="_165031850832213" Pws="_165031850832213" cws="_165031850832213" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_165031850831912" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <entity compositePrimaryKeyClass="PublicationPK" abs="true" class="Publication" v="true" jbn="false" xre="false" m="false" rootElement="_165031850831912" id="_165031854940717">
+        <ath>alars</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="title" id="_165031871275829">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="int" v="true" xvt="" name="copies" id="_165031872795731">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="java.util.Date" v="true" xvt="" name="creationDate" id="_165031890380247">
+                <xwm/>
+                <xm/>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_165031854940718">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Publication.findAll">
+            <query>Select e from Publication e</query>
+        </nq>
+        <nq e="false" name="Publication.findByTitle">
+            <query>Select p from Publication p where p.title=:title</query>
+        </nq>
+        <nq e="false" name="Publication.findByCopies">
+            <query>Select p from Publication p where p.copies=:copies</query>
+        </nq>
+        <nq e="false" name="Publication.findByCreationDate">
+            <query>Select p from Publication p where p.creationDate=:creationDate</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="MagazinePK" abs="false" class="Magazine" superclassId="_165031854940717" v="true" jbn="false" xre="false" m="false" rootElement="_165031850831912" id="_165031880155834">
+        <ath>alars</ath>
+        <attributes>
+            <basic attribute-type="int" v="true" xvt="" name="orderQty" id="_165031889148546">
+                <xwm/>
+                <xm/>
+            </basic>
+        </attributes>
+        <nq e="false" name="Magazine.findAll">
+            <query>Select e from Magazine e</query>
+        </nq>
+        <nq e="false" name="Magazine.findByPublicationDate">
+            <query>Select m from Magazine m where m.publicationDate=:publicationDate</query>
+        </nq>
+        <nq e="false" name="Magazine.findByOrderQty">
+            <query>Select m from Magazine m where m.orderQty=:orderQty</query>
+        </nq>
+        <nq e="false" name="Magazine.findByOrderQty">
+            <query>Select m from Magazine m where m.orderQty=:orderQty</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="BookPK" abs="false" class="Book" superclassId="_165031854940717" v="true" jbn="false" xre="false" m="false" rootElement="_165031850831912" id="_165031884358740">
+        <ath>alars</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="Author" id="_165031886462744">
+                <xwm/>
+                <xm/>
+            </basic>
+        </attributes>
+        <nq e="false" name="Book.findAll">
+            <query>Select e from Book e</query>
+        </nq>
+        <nq e="false" name="Book.findByAuthor">
+            <query>Select b from Book b where b.Author=:Author</query>
+        </nq>
+        <nq e="false" name="Book.findByAttribute">
+            <query>Select b from Book b where b.attribute=:attribute</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="DiscMagPK" abs="false" class="DiscMag" superclassId="_165031880155834" v="true" jbn="false" xre="false" m="false" rootElement="_165031850831912" id="_165031893744048">
+        <ath>alars</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="coveredTech" id="_165031897253452">
+                <xwm/>
+                <xm/>
+            </basic>
+        </attributes>
+        <nq e="false" name="DiscMag.findAll">
+            <query>Select e from DiscMag e</query>
+        </nq>
+        <nq e="false" name="DiscMag.findByCoveredTech">
+            <query>Select d from DiscMag d where d.coveredTech=:coveredTech</query>
+        </nq>
+    </entity>
+    <wsl>
+        <ws n="Main" id="_165031850832213">
+            <i ref="_165031880155834" x="371" y="388"/>
+            <i ref="_165031884358740" x="91" y="388"/>
+            <i ref="_165031893744048" x="514" y="508"/>
+            <i ref="_165031854940717" x="219" y="156"/>
+        </ws>
+    </wsl>
+</entity-mappings>
