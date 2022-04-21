@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings ptype="MONOLITH" ppkg="Alain_Arseneault_test4_practical" epkg="entities" v="5.4.3" rws="_165056726823568" Pws="_165056726823568" cws="_165056726823568" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_165056726823567" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <entity compositePrimaryKeyClass="Shape_ArseneaultPK" abs="false" class="Shape_Arseneault" v="true" jbn="false" xre="false" m="false" rootElement="_165056726823567" id="_165056727440169">
+        <ath>alars</ath>
+        <attributes>
+            <basic attribute-type="double" v="true" xvt="" name="area" id="_165056730642675">
+                <xwm/>
+                <xm/>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_165056727440570">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Shape_Arseneault.findAll">
+            <query>Select e from Shape_Arseneault e</query>
+        </nq>
+        <nq e="false" name="Shape_Arseneault.findByArea">
+            <query>Select s from Shape_Arseneault s where s.area=:area</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="Triangle_ArseneaultPK" abs="false" class="Triangle_Arseneault" superclassId="_165056727440169" v="true" jbn="false" xre="false" m="false" rootElement="_165056726823567" id="_165056729542772">
+        <ath>alars</ath>
+        <attributes>
+            <basic attribute-type="double" v="true" xvt="" name="base" ft="true" id="_165056732923976">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="double" v="true" xvt="" name="height" id="_165056733357977">
+                <xwm/>
+                <xm/>
+            </basic>
+        </attributes>
+        <nq e="false" name="Triangle_Arseneault.findAll">
+            <query>Select e from Triangle_Arseneault e</query>
+        </nq>
+        <nq e="false" name="Triangle_Arseneault.findByBase">
+            <query>Select t from Triangle_Arseneault t where t.base=:base</query>
+        </nq>
+        <nq e="false" name="Triangle_Arseneault.findByHeight">
+            <query>Select t from Triangle_Arseneault t where t.height=:height</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="Square_ArseneaultPK" abs="false" class="Square_Arseneault" superclassId="_165056727440169" v="true" jbn="false" xre="false" m="false" rootElement="_165056726823567" id="_165056734568879">
+        <ath>alars</ath>
+        <attributes>
+            <basic attribute-type="double" v="true" xvt="" name="theLength" id="_165056735937282">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="double" v="true" xvt="" name="width" id="_165056736681183">
+                <xwm/>
+                <xm/>
+            </basic>
+        </attributes>
+        <nq e="false" name="Square_Arseneault.findAll">
+            <query>Select e from Square_Arseneault e</query>
+        </nq>
+        <nq e="false" name="Square_Arseneault.findByTheLength">
+            <query>Select s from Square_Arseneault s where s.theLength=:theLength</query>
+        </nq>
+        <nq e="false" name="Square_Arseneault.findByWidth">
+            <query>Select s from Square_Arseneault s where s.width=:width</query>
+        </nq>
+    </entity>
+    <wsl>
+        <ws n="Main" id="_165056726823568">
+            <i ref="_165056729542772" x="682" y="302"/>
+            <i ref="_165056727440169" x="365" y="130"/>
+            <i ref="_165056734568879" x="165" y="330"/>
+        </ws>
+    </wsl>
+</entity-mappings>
